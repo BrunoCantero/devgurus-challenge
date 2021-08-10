@@ -6,7 +6,7 @@ export const getShows = () => {
     console.log(process.env.REACT_APP_API_URL, 'url')
     try {
       const response = await axios.get(
-        'http://api.tvmaze.com/search/shows?q=girls',
+        'https://api.tvmaze.com/search/shows?q=girls',
       )
       resolve(response.data)
     } catch (err) {

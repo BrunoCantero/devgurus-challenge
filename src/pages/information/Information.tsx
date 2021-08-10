@@ -15,6 +15,7 @@ import { useLocation } from 'react-router-dom'
 
 //services
 import { getImages } from '../../services/showsService'
+const defaultImg = 'images/default.jpg'
 
 const Information = () => {
   const [images, setImages] = useState([])
@@ -41,7 +42,7 @@ const Information = () => {
               alt="show img"
               width={350}
               height="auto"
-              src={show.show.image?.original}
+              src={show.show.image?.original || defaultImg}
             />
           </div>
           <div>
@@ -49,7 +50,7 @@ const Information = () => {
               {cleanText(show.show?.summary)}
             </div>
             <div className="summary-wrapper">
-              Genre:{' '}
+              Genre:
               {show.show?.genres.map((item: string) => item).join(', ') ||
                 'No Data'}
             </div>

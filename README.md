@@ -1,4 +1,4 @@
-This project is using Sass, react slick, react-rating,
+This project is using Sass, react slick, material-ui, react-device-detect
 
 ## Available Scripts
 

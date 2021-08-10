@@ -1,0 +1,14 @@
+.header {
+  height: 75px;
+  background-color: #d5819b;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  box-shadow: 2px 2px 5px 0px rgb(235, 189, 189);
+  .title {
+    font-size: 2rem;
+    color: rgb(232, 217, 217);
+  }
+}

@@ -1,0 +1,81 @@
+@import '../../variables.scss';
+
+.content-wrapper {
+  background-color: #100f0f !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+  justify-content: center;
+}
+
+.show-info {
+  display: flex;
+  flex-direction: row;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.show-image {
+  height: 100%;
+  margin: 50px;
+  border-radius: 3em;
+  .img {
+    border-radius: 0.5em;
+    @media screen and (min-width: 250px) and (max-width: $media-iphone-x) {
+      width: 200px;
+    }
+    @media screen and (min-width: $media-iphone-x) and (max-width: 600px) {
+      width: 250px;
+    }
+  }
+}
+
+.rating {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 600px) {
+    margin: 3em 2em 2em 2em;
+  }
+  .rating-text {
+    display: flex;
+    margin: 0px 10px 0px 0px;
+  }
+}
+
+.summary-wrapper {
+  width: 80%;
+  margin: 3em 2em 2em 0em;
+  color: #fff;
+  font-size: 1.4em;
+  @media screen and (max-width: 600px) {
+    margin: 3em 2em 2em 2em;
+  }
+}
+
+.slider-wrapper {
+  height: 30%;
+  width: 90%;
+  align-self: center;
+  padding-top: 8em;
+  padding-bottom: 8em;
+  margin: 0 auto;
+}
+
+.gallery {
+  color: #fff;
+  font-size: 1.4em;
+  align-self: center;
+  margin: 4em 2em -3em 2em;
+}
+
+.imageCarousel {
+  width: 100%;
+  height: 317.81px;
+  @media screen and (max-width: 375px) {
+    height: auto;
+    width: 200px;
+  }
+}

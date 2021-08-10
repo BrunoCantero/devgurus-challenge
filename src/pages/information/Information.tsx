@@ -3,8 +3,11 @@ import React, { useEffect, useState } from 'react'
 // import COMPONENTS
 import { Header } from '../../components/Header/Header'
 import { Carousel } from '../../components/carousel/Carousel'
+import Rating from '@material-ui/lab/Rating'
+import StarBorderIcon from '@material-ui/icons/StarBorder'
+
 import { cleanText } from '../../utils/'
-import Rating from 'react-rating'
+// import Rating from 'react-rating'
 
 // IMPORT styles
 import './Information.scss'
@@ -30,6 +33,7 @@ const Information = () => {
 
   useEffect(() => {
     getImagesByShowId(show.show.id)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     <>
@@ -65,32 +69,14 @@ const Information = () => {
                 Rating: {show.show.rating.average || 'No Data'}
               </p>
               <Rating
-                emptySymbol={
-                  <img
-                    alt="empty"
-                    width={20}
-                    height={20}
-                    src="images/star-black.png"
-                  />
+                name="customized-empty"
+                defaultValue={show.show.rating.average || 0}
+                precision={0.5}
+                readOnly
+                max={10}
+                emptyIcon={
+                  <StarBorderIcon fontSize="inherit" className="rating-empty" />
                 }
-                placeholderSymbol={
-                  <img
-                    alt="placeholder"
-                    width={20}
-                    height={20}
-                    src="images/star-yellow.png"
-                  />
-                }
-                fullSymbol={
-                  <img
-                    alt="full"
-                    width={20}
-                    height={20}
-                    src="images/star-yellow.png"
-                  />
-                }
-                stop={10}
-                placeholderRating={show.show.rating.average}
               />
             </div>
           </div>

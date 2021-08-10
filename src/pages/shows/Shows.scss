@@ -1,0 +1,31 @@
+@import '../../variables.scss';
+
+.body-wrapper {
+  background-color: #100f0f !important;
+  height: 100%;
+  padding-bottom: 2.1em;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 100px) and (max-width: $media-iphone-x) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (min-width: $media-iphone-x) and (max-width: $media-iphone-11) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media screen and (min-width: $media-iphone-11) and (max-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 412px) and (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
